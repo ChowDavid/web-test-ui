@@ -27,7 +27,7 @@ public class AppTest{
 	  public void setUp() throws Exception {
 	    //driver = new FirefoxDriver();
 		driver = new HtmlUnitDriver();
-	    //baseUrl = "http://localhost:18080";
+	    baseUrl = "http://localhost:18080";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  }
 
