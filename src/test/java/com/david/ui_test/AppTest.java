@@ -25,8 +25,8 @@ public class AppTest{
 
 	  @Before
 	  public void setUp() throws Exception {
-	    driver = new FirefoxDriver();
-		//driver = new HtmlUnitDriver();
+	    //driver = new FirefoxDriver();
+		driver = new HtmlUnitDriver();
 		driver.manage().window().setSize(new Dimension(1900, 1000));
 	    baseUrl = "http://localhost:18080";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
