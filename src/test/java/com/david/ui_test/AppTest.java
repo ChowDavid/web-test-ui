@@ -39,6 +39,10 @@ public class AppTest{
 	    driver.findElement(By.name("password")).clear();
 	    driver.findElement(By.name("password")).sendKeys("123");
 	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+	    try {
+	    	driver.wait(2000);
+	    } catch (Exception e){}
+	    System.out.println(driver.getPageSource());
 	    assertTrue(driver.getPageSource().contains("Served at: Hello 123 David /web-test"));
 	  }
 	  
@@ -49,6 +53,9 @@ public class AppTest{
 	    driver.findElement(By.name("password")).clear();
 	    driver.findElement(By.name("password")).sendKeys("123");
 	    driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+	    try {
+	    	driver.wait(2000);
+	    } catch (Exception e){}
 	    System.out.println(driver.getPageSource());
 	    assertTrue(driver.getPageSource().contains("Served at: Hello 123  /web-test"));
 	  }
